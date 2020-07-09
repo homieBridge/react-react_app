@@ -1,22 +1,10 @@
-import React, { Component } from 'react';
-import './App.css';
+import React from 'react';
+import ReactDOM from 'react-dom';
+import './index.css';
+import App from './App';
 
 
-class App extends Component {
-
-
-  constructor(props){
-    super();
-    this.title = props.title;
-    this.message = props.message;
-  }
-  render(){
-    return <div>
-      <h1>{this.title}</h1>
-      <p>{this.message}</p>
-  </div>;
-  }
-}
-
-
-export default App;
+ReactDOM.render(
+    <App title="App" message="This is App Component!" />,
+    document.getElementById('root')
+);
