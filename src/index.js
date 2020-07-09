@@ -1,11 +1,22 @@
-import React from 'react';
-import ReactDOM from 'react-dom';
-import './index.css';
-import App from './App';
-import * as serviceWorker from './serviceWorker';
+import React, { Component } from 'react';
+import './App.css';
 
 
-ReactDOM.render(<App />, document.getElementById('root'));
+class App extends Component {
 
 
-serviceWorker.unregister();
+  constructor(props){
+    super();
+    this.title = props.title;
+    this.message = props.message;
+  }
+  render(){
+    return <div>
+      <h1>{this.title}</h1>
+      <p>{this.message}</p>
+  </div>;
+  }
+}
+
+
+export default App;
